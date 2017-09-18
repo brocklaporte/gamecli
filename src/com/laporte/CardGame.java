@@ -6,15 +6,20 @@ public class CardGame extends Game {
 
     public CardGame(){
         super();
-
-        // since this is a card game, we know we
-        // always need an instance of a CardDeck
-        this.theDeck = new CardDeck();
     }
 
     public void initGame(){
         super.initGame();
         System.out.println("In method CardGame.initGame()");
+
+        // do what we need to do to initialize all CardGames...
+        // We always need an instance of a CardDeck
+        // (we'll ignore games that require multiple card decks for now...)
+        this.theDeck = new CardDeck();
+
+        // nothing like a good shuffle to start a card game...
+        this.theDeck.shuffle();
+
     }
 
     public boolean playGame(){
